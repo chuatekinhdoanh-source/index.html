@@ -103,6 +103,12 @@
             0% { transform: translate(0, 0) scale(1); }
             100% { transform: translate(20px, -20px) scale(1.1); }
         }
+        
+        /* Video Container Hover Effect */
+        .video-wrapper:hover .play-button {
+            transform: scale(1.1);
+            background-color: #10b981;
+        }
     </style>
 </head>
 <body class="antialiased overflow-x-hidden">
@@ -127,6 +133,7 @@
                         <a href="#about" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Giới thiệu</a>
                         <a href="#skills" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Kỹ năng</a>
                         <a href="#projects" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Dự án AI</a>
+                        <a href="#media" class="hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Video & Ảnh</a>
                         <a href="#contact" class="bg-primary hover:bg-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105">Liên hệ</a>
                     </div>
                 </div>
@@ -147,6 +154,7 @@
                 <a href="#about" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Giới thiệu</a>
                 <a href="#skills" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Kỹ năng</a>
                 <a href="#projects" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Dự án AI</a>
+                <a href="#media" class="text-gray-300 hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Video & Ảnh</a>
                 <a href="#contact" class="text-primary block px-3 py-2 rounded-md text-base font-medium font-bold">Liên hệ ngay</a>
             </div>
         </div>
@@ -354,6 +362,66 @@
                         <div class="flex flex-wrap gap-2">
                             <span class="px-3 py-1 bg-orange-900/30 text-orange-400 rounded-full text-xs">Scikit-learn</span>
                             <span class="px-3 py-1 bg-blue-900/30 text-blue-400 rounded-full text-xs">Pandas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section: Video & Images -->
+    <section id="media" class="py-20 bg-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">Video & Hình Ảnh Hoạt Động</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded"></div>
+                <p class="mt-4 text-gray-400">Một số khoảnh khắc học tập và demo sản phẩm</p>
+            </div>
+
+            <!-- Video Demo -->
+            <div class="mb-16 reveal">
+                <div class="max-w-4xl mx-auto bg-card p-2 rounded-xl border border-gray-700 shadow-2xl">
+                    <div class="relative w-full overflow-hidden rounded-lg aspect-video video-wrapper group cursor-pointer">
+                        <!-- Youtube Embed Updated -->
+                        <iframe class="w-full h-full object-cover" src="https://www.youtube.com/embed/6j5rgMzOuQQ" title="Project Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="text-xl font-bold text-white">Demo: Dự Án Của Tôi</h3>
+                        <p class="text-gray-400 text-sm">Video giới thiệu chi tiết về sản phẩm và quá trình thực hiện.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Gallery -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+                <!-- Image 1 -->
+                <div class="relative group overflow-hidden rounded-xl h-64 md:h-48 col-span-2 md:col-span-2">
+                    <img src="https://placehold.co/800x400/2c3e50/FFF?text=Teamwork+at+Lab" alt="Teamwork" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-bold">Làm việc nhóm tại Lab</span>
+                    </div>
+                </div>
+                <!-- Image 2 -->
+                <div class="relative group overflow-hidden rounded-xl h-64 md:h-48">
+                    <img src="https://placehold.co/400x400/34495e/FFF?text=Coding" alt="Coding" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-bold">Hackathon 2023</span>
+                    </div>
+                </div>
+                <!-- Image 3 -->
+                <div class="relative group overflow-hidden rounded-xl h-64 md:h-48">
+                    <img src="https://placehold.co/400x400/16a085/FFF?text=Awards" alt="Award" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="text-white font-bold">Nhận giải thưởng</span>
+                    </div>
+                </div>
+                <!-- Image 4 (Full Width on Mobile) -->
+                <div class="relative group overflow-hidden rounded-xl h-64 md:h-60 col-span-2 md:col-span-4 mt-0 md:mt-2">
+                    <img src="https://placehold.co/1200x600/2980b9/FFF?text=Presentation+Day" alt="Presentation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Buổi Báo Cáo Đồ Án</h4>
+                            <p class="text-gray-300 text-sm">Trình bày về ứng dụng AI trong Y tế trước hội đồng.</p>
                         </div>
                     </div>
                 </div>
